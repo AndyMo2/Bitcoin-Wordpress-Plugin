@@ -113,7 +113,7 @@
 			jQuery('.'+ext+'paymentcaptcha_title').text((data.boxtype=='paymentbox') ? data.texts.title : data.coinname);
 			jQuery('.'+ext+'paymentcaptcha_successful').text((data.boxtype=='paymentbox') ? data.texts.payment_successful : data.texts.captcha_successful);
 			jQuery('.'+ext+'paymentcaptcha_date').html(((data.boxtype=='paymentbox') ? data.texts.received_on : data.texts.captcha_passed) + ' <b>' + data.date + '</b>');
-			jQuery('.'+ext+'button_details').html('<span class="glyphicon glyphicon-'+((data.coinlabel=='BTC') ? 'bitcoin' : 'globe')+'"></span>&#160; ' + data.texts.btn_res);
+			
 			jQuery('.'+ext+'button_details').click(function() { newwindow=window.open(data.tx_url,'','height=800,width=1100'); if (window.focus) {newwindow.focus()} return false; });
 
 			jQuery('.'+ext+'texts_pay_now').hide();
@@ -264,7 +264,7 @@
 
 				if ( jQuery(this).prop('checked') ) {
 					img.addClass(options.imgItemCheckedClass);
-				}
+				/js/support.min.js to /js/_source/support.js
 
 				img.on('click', function(e) {
 					jQuery(this)
